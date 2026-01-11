@@ -32,31 +32,9 @@
   <title>chain_calculator</title>
   <link rel="manifest" href="/chain_calculator/manifest.json">
 </head>
-<body>
+ <body>
   <script src="flutter_bootstrap.js" async></script>
-  
-  <script>
-    // 2. flutter_bootstrap.js が読み込まれた後に実行される設定
-    window.addEventListener('load', function(ev) {
-      // _flutter が存在するか確認してから実行する
-      if (window._flutter && window._flutter.loader) {
-        _flutter.loader.loadEntrypoint({
-          serviceWorker: {
-            serviceWorkerVersion: null,
-          },
-          onEntrypointLoaded: async function(engineInitializer) {
-            const appRunner = await engineInitializer.initializeEngine({
-              renderer: "html",
-            });
-            await appRunner.runApp();
-          }
-        });
-      } else {
-        // もし bootstrap が自動で起動している場合は何もしない
-        console.log("Flutter bootstrap is handling the load.");
-      }
-    });
-  </script>
-</body>
+ </body>
 </html>
+
 
